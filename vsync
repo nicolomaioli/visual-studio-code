@@ -1,0 +1,46 @@
+#! /bin/sh
+
+# Globals
+EXTENSIONS_FILE="extensions.txt"
+
+# Functions
+help()
+{
+	cat << EOF
+Here is some helpful hints on how to run this program
+EOF
+}
+
+update() {
+	code --list-extensions > "$EXTENSIONS_FILE"
+}
+
+install() {
+	while read ext; do
+		code --install-extension "$ext"
+	done < "$EXTENSIONS_FILE"
+}
+
+# Parse arguments
+while [[ $# -gt 0 ]]; do
+	key="$1"
+
+	case $key in
+		-h|--help)
+			help
+			exit 0
+	 	;;
+		update)
+			update
+			exit 0
+		;;
+		install)
+			install
+			exit 0
+		;;
+		*)
+			echo "unknown option $key"
+			exit 1
+		;;
+	esac
+done

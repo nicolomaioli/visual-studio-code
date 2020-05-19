@@ -1,0 +1,101 @@
+{
+    // Start
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.startupEditor": "newUntitledFile",
+    "window.restoreWindows": "none",
+    "files.hotExit": "off",
+    "editor.fontFamily": "'Fira Code', Monaco, 'Courier New', monospace",
+    "window.zoomLevel": 0,
+    // Search
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "search.quickOpen.includeHistory": false,
+    // Terminal
+    "workbench.panel.defaultLocation": "right",
+    // EOF
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    // Indentation
+    "editor.tabSize": 4,
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": true,
+    "editor.renderWhitespace": "all",
+    // Rulers
+    "editor.rulers": [
+        80
+    ],
+    // Language specific settings
+    "[typescript]": {
+        "editor.tabSize": 2
+    },
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+    "[json]": {
+        "editor.tabSize": 2
+    },
+    "[html]": {
+        "editor.tabSize": 2
+    },
+    // YAML - whitelist Cloud Formation functions
+    "yaml.customTags": [
+        "!Base64 mapping",
+        "!ImportValue mapping",
+        "!And sequence",
+        "!Equals sequence",
+        "!GetAtt sequence",
+        "!If sequence",
+        "!FindInMap sequence",
+        "!Join sequence",
+        "!Not sequence",
+        "!Or sequence",
+        "!Select sequence",
+        "!Sub sequence",
+        "!Split sequence",
+        "!Cidr sequence",
+        "!Ref scalar",
+        "!Sub scalar",
+        "!GetAZs scalar",
+        "!GetAtt scalar",
+        "!Condition scalar",
+        "!ImportValue scalar",
+        "!Cidr scalar"
+    ],
+    "yaml.format.enable": true,
+    // JS/TS
+    "eslint.validate": [
+        "javascript",
+        "typescript"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": true,
+    "javascript.validate.enable": false,
+    // Python
+    "python.jediEnabled": false,
+    // Go
+    "go.useLanguageServer": true,
+    "go.autocompleteUnimportedPackages": true,
+    "go.buildOnSave": "off",
+    "go.lintTool": "staticcheck",
+    "go.lintOnSave": "package",
+    "go.vetOnSave": "package",
+    "go.vetFlags": [
+        "-all",
+        "-shadow"
+    ],
+    "terraform.indexing": {
+        "enabled": false,
+        "liveIndexing": false,
+        "delay": 500,
+        "exclude": [
+            ".terraform/**/*",
+            "**/.terraform/**/*"
+        ]
+    },
+    "terraform.languageServer": {
+        "enabled": true,
+        "args": []
+    }
+}
