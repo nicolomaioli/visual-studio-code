@@ -4,18 +4,29 @@
 EXTENSIONS_FILE="extensions.txt"
 
 # Functions
+log_error()
+{
+	printf "\e[31mERROR:\e[0m $1\n"
+}
+
 help()
 {
 	cat << EOF
-Here is some helpful hints on how to run this program
+Synchronize extensions with "$EXTENSIONS_FILE".
+
+help			show this help
+update			save current extensions to "$EXTENSIONS_FILE"
+install			install all extensions in "$EXTENSIONS_FILE"
 EOF
 }
 
-update() {
+update()
+{
 	code --list-extensions > "$EXTENSIONS_FILE"
 }
 
-install() {
+install()
+{
 	while read ext; do
 		code --install-extension "$ext"
 	done < "$EXTENSIONS_FILE"
@@ -26,7 +37,7 @@ while [[ $# -gt 0 ]]; do
 	key="$1"
 
 	case $key in
-		-h|--help)
+		help)
 			help
 			exit 0
 	 	;;
@@ -39,7 +50,8 @@ while [[ $# -gt 0 ]]; do
 			exit 0
 		;;
 		*)
-			echo "unknown option $key"
+			log_error "unknown option $key"
+			help
 			exit 1
 		;;
 	esac
