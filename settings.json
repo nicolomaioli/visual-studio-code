@@ -99,5 +99,6 @@
     "terraform.languageServer": {
         "enabled": true,
         "args": []
-    }
+    },
+    "deno.enable": false
 }
