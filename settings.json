@@ -72,10 +72,7 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
-    "editor.formatOnSave": true,
     "javascript.validate.enable": false,
-    // Python
-    "python.jediEnabled": false,
     // Go
     "go.useLanguageServer": true,
     "go.autocompleteUnimportedPackages": true,
@@ -87,18 +84,18 @@
         "-all",
         "-shadow"
     ],
-    "terraform.indexing": {
-        "enabled": false,
-        "liveIndexing": false,
-        "delay": 500,
-        "exclude": [
-            ".terraform/**/*",
-            "**/.terraform/**/*"
+    "editor.formatOnSave": true,
+    "terraform.languageServer": {
+        "external": true,
+        "args": [
+            "serve"
         ]
     },
-    "terraform.languageServer": {
-        "enabled": true,
-        "args": []
-    },
-    "deno.enable": false
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.project.importHint": false,
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "explorer.confirmDragAndDrop": false,
+    "python.languageServer": "Microsoft",
+    "terminal.integrated.shell.osx": "/bin/zsh"
 }
