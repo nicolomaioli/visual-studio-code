@@ -1,18 +1,16 @@
 {
     // Start
-    "workbench.colorTheme": "Monokai Pro",
+    "workbench.colorTheme": "One Dark Pro Darker",
     "workbench.startupEditor": "newUntitledFile",
     "window.restoreWindows": "none",
     "files.hotExit": "off",
     "editor.fontFamily": "'Fira Code', Monaco, 'Courier New', monospace",
-    "window.zoomLevel": 0,
     "explorer.confirmDragAndDrop": false,
     // Search
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "search.quickOpen.includeHistory": false,
     // Terminal
-    "terminal.integrated.shell.osx": "/bin/zsh",
-    "workbench.panel.defaultLocation": "right",
+    "workbench.panel.defaultLocation": "bottom",
     // EOF
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
@@ -28,11 +26,11 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
-    // C
-    "C_Cpp.updateChannel": "Insiders",
     // Misc
+    "extensions.ignoreRecommendations": true,
     "redhat.telemetry.enabled": false,
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "workbench.iconTheme": "Monokai Pro Icons"
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 }
